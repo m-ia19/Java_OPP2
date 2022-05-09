@@ -16,6 +16,15 @@ public class Meal {
 
 	// TODO: implement an addFood() method
 	// to collect names, weights and accumulate kCals
+	public void addFood(Food food, int weigth) {
+		ingredients[ingredientCount]= food.name;
+		amounts[ingredientCount]=food.prepare(weigth);
+		kcalSum+= food.kcal;
+		ingredientCount++;
+		
+		
+	}
+	
 
 	public void printStatus() {
 		System.out.println("Your meal has: " + kcalSum + "kcal.");
